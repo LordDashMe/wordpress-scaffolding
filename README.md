@@ -2,6 +2,10 @@
 
 A kick starter git repository structure of the wordpress project.
 
+## Disclaimer
+
+- The structure is only support Apache for the webserver. Soon Nginx will be supported so watch out.
+
 ## Wordpress Version
 
 - 4.9.8
@@ -18,7 +22,7 @@ A kick starter git repository structure of the wordpress project.
 
   - ```wp-config-sample.php``` > ```wp-config.php``` - To enable the wordpress config file.
 
-  - ```htaccess-sample``` > ```.htaccess``` - To enable the security and some overriding process for the apache server host setup.
+  - ```htaccess-sample``` > ```.htaccess``` - To enable some security and override the apache host setup.
 
 ## License
 
