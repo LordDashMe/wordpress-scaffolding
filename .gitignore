@@ -1,0 +1,6 @@
+.htaccess
+wp-config.php
+/node_modules/
+/vendor/
+/site-content/uploads/
+/site-content/debug.log

@@ -1,0 +1,56 @@
+# BEGIN WORDPRESS ADMIN WHITELISTING
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} ^(.*)?wp-admin/admin-ajax\.php(.*)$
+    RewriteRule ^(.*)$ - [L]
+    RewriteCond %{REQUEST_URI} ^(.*)?wp-login\.php(.*)$ [OR]
+    RewriteCond %{REQUEST_URI} ^(.*)?wp-admin/
+    RewriteCond %{REMOTE_ADDR} !^192.168.0.1$
+    RewriteRule ^(.*)$ - [R=403,L]
+</IfModule>
+
+# BEGIN WORDPRESS SUPORT AUTHORIZATION HEADER
+<IfModule mod_rewrite.c>
+    RewriteEngine on
+    RewriteCond %{HTTP:Authorization} ^(.*)
+    RewriteRule ^(.*) - [E=HTTP_AUTHORIZATION:%1]
+</IfModule>
+
+# BEGIN PREVENT DIRECTORY LISTING
+Options All -Indexes
+Options +FollowSymLinks
+
+# BEGIN DENY ACCESS TO FILENAMES STARTING WITH dot(.)
+<FilesMatch "^\.">
+    Order Allow,Deny
+    Deny from All
+</FilesMatch>
+
+# BEGIN BLOCK ACCESS TO SPECIFIC DIRECTORIES
+RedirectMatch 404 ^/\.git(/?|/.*)
+RedirectMatch 404 ^/vendor(/?|/.*)
+
+# BEGIN BLOCK ACCESS TO SPECIFIC FILES
+<FilesMatch "^(composer.json|composer.lock|.htaccess|htaccess-sample|wp-config-sample.php|wp-config.php|maintenance.php)$">
+    Order Allow,Deny
+    Deny from All
+</FilesMatch>
+<FilesMatch "^(debug.log)$">
+    Order Allow,Deny
+    Deny from All
+</FilesMatch>
+
+# BEGIN WORDPRESS
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteRule ^index\.php$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule . /index.php [L]
+</IfModule>
+
+# OPTIONAL: REDIRECT ALL HTTP CODE 4XX TO 404
+# ErrorDocument 400 /404
+# ErrorDocument 404 /404
+# ErrorDocument 403 /404
