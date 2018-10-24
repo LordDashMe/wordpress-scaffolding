@@ -1,6 +1,6 @@
 # Wordpress Scaffolding
 
-A kick starter git repository structure of the wordpress project.
+:construction: A kick starter git repository project structure for the wordpress.
 
 ## Disclaimer
 
