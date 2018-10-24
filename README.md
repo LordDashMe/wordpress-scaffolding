@@ -2,9 +2,9 @@
 
 :building_construction: :construction: :construction_worker: A kick starter git repository project structure for the wordpress.
 
-## Disclaimer
+## Supported Web Server
 
-- The structure is only support Apache for the webserver. Soon Nginx will be supported so watch out.
+- Apache
 
 ## Wordpress Version
 
