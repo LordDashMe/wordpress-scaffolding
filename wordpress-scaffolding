@@ -1,0 +1,91 @@
+#!/usr/bin/env php
+<?php
+
+if ($argv[1] == 'install') {
+    if ($argv[2] != null) {
+        // downloadWordpress('https://getcomposer.org/installer');
+        echo PHP_EOL;
+        $filename = downloadWordpress('https://wordpress.org/wordpress-' . $argv[2] . '.zip');
+        extractTo($filename);
+        echo "\nInstallation Completed! \n";
+    }
+}
+
+function downloadWordpress($url)
+{
+    echo "Downloading wordpress from source: {$url} \n";
+    // echo "Retrieving http header..."; 
+    $header = get_headers("$url");
+    $pp = "0";
+    // echo json_encode($header, JSON_PRETTY_PRINT);
+    $key = key(preg_grep('/\bLength\b/i', $header));
+    $type = key(preg_grep('/\bType\b/i', $header));
+    $http = substr($header[0], 9, 3);
+    $tbytes = @explode(" ",$header[$key])[1];
+    $type = @explode("/",explode(" ",$header[$type])[1])[1];
+    echo "Target size: ".floor((($tbytes / 1000)/1000))."MB | ".floor(($tbytes/1000))."KB";
+    $t = explode("/",$url);
+    $remote = fopen($url, 'r');
+    if (!$remote) { echo 'Download Failed!'; exit; }
+    $nm = $t[count($t)-1];
+    $local = fopen($nm, 'w');
+    $read_bytes = 0;  
+    echo PHP_EOL;
+    while(!feof($remote)) {
+        $buffer = fread($remote, intval($tbytes));
+        fwrite($local, $buffer);
+        $byte_per_second = strlen($buffer);
+        $read_bytes += strlen($buffer);
+        $progress = min(100, 100 * ($read_bytes / $tbytes));
+        
+        $shell = 50; /* Progress bar width */ 
+        $ebar = 50;
+        $rt = $shell * $progress / 100;
+        $ebar = $ebar - $rt;
+        
+        if ($rt === $shell) {
+            $rt = 50;
+            $ebar = 0;
+        }
+
+        echo "\033[35;2m\e[0mDownloading: [".round($progress, 2)."%] ".floor(($read_bytes / 1000))."KB | {$byte_per_second}B/s " . str_repeat("█", $rt) . str_repeat("░", $ebar) . " \r";
+        usleep(1000);
+    }
+    if ($read_bytes === intval($tbytes)) {
+        echo "\nDownload Completed!";
+    } else {
+        echo "\nDownload Failed! Please try again. \n";
+        exit;
+    }
+    echo PHP_EOL;
+    fclose($remote);
+    fclose($local);
+
+    return $nm;
+}
+
+function extractTo($source)
+{
+    $destination = extractPath();
+    echo "Extracting the downloaded file to destination: {$destination} \n";
+    
+    if (class_exists('ZipArchive')) {
+        $zip = new ZipArchive;
+        $res = $zip->open($source);
+        if ($res === FALSE) {
+            echo "No extractable file found! \n";
+            exit;
+        }
+        $zip->extractTo($destination);
+        $zip->close();
+    } else {
+        exec("unzip -o -d {$destination} {$source}");
+    }
+
+    echo "Extraction Completed! \n";
+}
+
+function extractPath()
+{
+    return __DIR__ . '/';
+}
