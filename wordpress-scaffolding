@@ -3,7 +3,6 @@
 
 if ($argv[1] == 'install') {
     if ($argv[2] != null) {
-        // downloadWordpress('https://getcomposer.org/installer');
         echo PHP_EOL;
         $filename = downloadWordpress('https://wordpress.org/wordpress-' . $argv[2] . '.zip');
         extractTo($filename);
