@@ -7,8 +7,12 @@ if ($argv[1] == 'install') {
         $filename = downloadWordpress('https://wordpress.org/wordpress-' . $argv[2] . '.zip');
         extractTo($filename);
         echo "\nInstallation Completed! \n";
+        exit;
     }
 }
+
+echo "\n Sorry I cannot process your action.";
+exit;
 
 function downloadWordpress($url)
 {
