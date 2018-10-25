@@ -38,7 +38,7 @@ composer create-project lorddashme/wordpress-scaffolding <your-project-name>
 
   - ```wp-config-sample.php``` > ```wp-config.php``` - To enable the wordpress config file.
 
-  - ```htaccess-sample``` > ```.htaccess``` - To enable some security and override the apache host setup.
+  - For apache only: ```htaccess-sample``` > ```.htaccess``` - To enable some security and override the apache host setup.
 
 ## License
 
