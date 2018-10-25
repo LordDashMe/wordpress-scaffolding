@@ -32,7 +32,7 @@ composer create-project lorddashme/wordpress-scaffolding <your-project-name>
 
   - You can check the wordpress download releases here: https://wordpress.org/download/releases/
   
-- <b>Optional:</b> If you are not lazy to install wordpress on your own you can skip this. 
+- <b>Optional:</b> If you are lazy to install wordpress on your own, you can follow the instruction below. 
   
   - To install specific wordpress version you can use the command below, but make sure you are in the root directory of you project:
 
