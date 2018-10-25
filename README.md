@@ -10,7 +10,9 @@
 
 ## Wordpress
 
-- The Wordpress core codes registered as git submodule in ```/wordpress/```.
+- The wordpress core is registered as git submodule in ```/wordpress/```, you can override it what ever wordpress version you want to use.
+
+- Check the wordpress download releases here: https://wordpress.org/download/releases/
 
 - Current git submodule version: 4.9.8
 
