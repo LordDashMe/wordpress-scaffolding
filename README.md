@@ -2,19 +2,23 @@
 
 :building_construction: :construction: :construction_worker: A kick starter project structure for wordpress.
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/lorddashme/wordpress-scaffolding.svg?style=flat-square)](https://packagist.org/packages/lorddashme/wordpress-scaffolding)
+[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%205.6-8892BF.svg?style=flat-square)](https://php.net/)
 
 ## Supported Web Server
 
 - Apache
 
-## Wordpress Version
+## Wordpress
 
-- 4.9.8
+- The Wordpress core codes registered as git submodule in ```/wordpress/```.
+
+- Current git submodule version: 4.9.8
 
 ## Requirement(s)
 
-- You can check the latest wordpress requirements: <https://wordpress.org/about/requirements/>
+- PHP version from 5.6.* up to latest.
+
+- You can also check the latest wordpress requirements: <https://wordpress.org/about/requirements/>
 
 ## Install
 
