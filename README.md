@@ -32,11 +32,13 @@ composer create-project lorddashme/wordpress-scaffolding <your-project-name>
 
   - You can check the wordpress download releases here: https://wordpress.org/download/releases/
   
-- This is optional and if you are not lazy to install wordpress on your own you can skip this. To install specific wordpress version you can use the command below, but make sure you are in the root directory of you project:
+- <b>Optional:</b> If you are not lazy to install wordpress on your own you can skip this. 
+  
+  - To install specific wordpress version you can use the command below, but make sure you are in the root directory of you project:
 
-```text
-php wordpress-scaffolding install <your-wordpress-version>
-```
+  ```text
+  php wordpress-scaffolding install <your-wordpress-version>
+  ```
 
 - Copy and rename the default file(s):
 
