@@ -8,14 +8,6 @@
 
 - Apache
 
-## Wordpress
-
-- The wordpress core is registered as git submodule in ```/wordpress/```, you can override it what ever wordpress version you want to use.
-
-- Check the wordpress download releases here: https://wordpress.org/download/releases/
-
-- Current git submodule version: 4.9.8
-
 ## Requirement(s)
 
 - PHP version from 5.6.* up to latest.
@@ -31,6 +23,12 @@ composer create-project lorddashme/wordpress-scaffolding <your-project-name>
 ```
 
 ## Usage
+
+- The wordpress core is only registered as git submodule in ```/wordpress/```, current git submodule wordpress version is 4.9.8.
+
+  - You can check the wordpress download releases here: https://wordpress.org/download/releases/
+
+- Add what ever wordpress version you want to use in ```/wordpress/```.
 
 - Copy and rename the default file(s):
 
