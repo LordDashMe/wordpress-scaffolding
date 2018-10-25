@@ -2,9 +2,6 @@
 
 namespace LordDashMe\WordpressScaffolding\Maintenance;
 
-use function LordDashMe\WordpressScaffolding\Maintenance\getClientIP;
-use function LordDashMe\WordpressScaffolding\Maintenance\isMaintenanceMode;
-
 \define('MAINTENANCE_MODE', false);
 \define('WHITELISTED_CLIENT_IP', '127.0.0.1|192.168.0.1');
 
@@ -15,7 +12,7 @@ if (! MAINTENANCE_MODE) {
 function getClientIP()
 {
     if (! empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
-        return $_SERVER['HTTP_X_FORWARDED_FOR'];
+        return \trim($_SERVER['HTTP_X_FORWARDED_FOR']);
     }
     
     return \trim($_SERVER['REMOTE_ADDR']);
@@ -26,7 +23,7 @@ function isMaintenanceMode()
     $whitelistedClientIP = \explode('|', WHITELISTED_CLIENT_IP);
 
     foreach ($whitelistedClientIP as $allowedClientIP) {
-        $clientIp = \explode(',', getClientIP());
+        $clientIp = \explode(',', \LordDashMe\WordpressScaffolding\Maintenance\getClientIP());
         if (\in_array($allowedClientIP, $clientIp)) {
             return false;
         }
@@ -35,7 +32,7 @@ function isMaintenanceMode()
     return true;
 }
 
-if (isMaintenanceMode()) {
+if (\LordDashMe\WordpressScaffolding\Maintenance\isMaintenanceMode()) {
 ?>
 <!DOCTYPE html>
 <html>
