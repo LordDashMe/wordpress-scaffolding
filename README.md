@@ -4,6 +4,12 @@
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/lorddashme/wordpress-scaffolding.svg?style=flat-square)](https://packagist.org/packages/lorddashme/wordpress-scaffolding) [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%205.6-8892BF.svg?style=flat-square)](https://php.net/)
 
+## Wordpress
+
+- The wordpress core is only registered as git submodule in ```/wordpress/```, 
+
+- Current git submodule wordpress version is 4.9.8.
+
 ## Supported Web Server
 
 - Apache
@@ -24,11 +30,9 @@ composer create-project lorddashme/wordpress-scaffolding <your-project-name>
 
 ## Usage
 
-- The wordpress core is only registered as git submodule in ```/wordpress/```, current git submodule wordpress version is 4.9.8.
+- Add what ever wordpress version you want to use in ```/wordpress/```.
 
   - You can check the wordpress download releases here: https://wordpress.org/download/releases/
-
-- Add what ever wordpress version you want to use in ```/wordpress/```.
 
 - Copy and rename the default file(s):
 
