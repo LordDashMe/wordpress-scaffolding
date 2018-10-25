@@ -2,7 +2,7 @@
 
 :building_construction: :construction: :construction_worker: A kick starter project structure for wordpress.
 
-## Wordpress
+## Note
 
 - The wordpress core is only registered as git submodule in ```/wordpress/```, 
 
