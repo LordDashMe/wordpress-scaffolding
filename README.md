@@ -26,6 +26,12 @@
 composer create-project lorddashme/wordpress-scaffolding <your-project-name>
 ```
 
+- To install specific wordpress version you can use the command below, but make sure you are in the root directory of you project:
+
+```text
+php wordpress-scaffolding install <your-wordpress-version>
+```
+
 ## Usage
 
 - Add what ever wordpress version you want to use in ```/wordpress/```.
