@@ -2,6 +2,8 @@
 
 :building_construction: :construction: :construction_worker: A kick starter project structure for wordpress.
 
+[![Latest Stable Version](https://img.shields.io/packagist/v/lorddashme/wordpress-scaffolding.svg?style=flat-square)](https://packagist.org/packages/lorddashme/wordpress-scaffolding)
+
 ## Supported Web Server
 
 - Apache
@@ -21,8 +23,6 @@
 ```txt
 composer create-project lorddashme/wordpress-scaffolding <your-project-name>
 ```
-
-- 
 
 ## Usage
 
