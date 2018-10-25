@@ -1,6 +1,9 @@
 #!/usr/bin/env php
 <?php
 
+/**
+ * TODO: Convert this to Symfony Console.
+ */
 if ($argv[1] == 'install') {
     if ($argv[2] != null) {
         echo "Preparing...\n";
