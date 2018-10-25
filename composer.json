@@ -1,6 +1,6 @@
 {
     "name": "lorddashme/wordpress-scaffolding",
-    "description": "A kick starter git repository project structure for the wordpress.",
+    "description": "A kick starter project structure for wordpress.",
     "keywords": ["wordpress", "blog", "cms", "project", "scaffolding"],
     "type": "project",
     "homepage": "https://github.com/lorddashme/wordpress-scaffolding",
