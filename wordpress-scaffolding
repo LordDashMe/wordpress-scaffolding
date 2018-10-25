@@ -3,18 +3,19 @@
 
 if ($argv[1] == 'install') {
     if ($argv[2] != null) {
-        echo PHP_EOL;
-        $filename = downloadWordpress('https://wordpress.org/wordpress-' . $argv[2] . '.zip');
-        extractTo($filename);
-        echo "\nInstallation Completed! \n";
+        echo "Preparing...\n";
+        $filename = downloadFile('https://wordpress.org/wordpress-' . $argv[2] . '.zip');
+        extractFile($filename, __DIR__ . '/');
+        removeUnusedFile($filename);
+        echo "Finished! \n";
         exit;
     }
 }
 
-echo "\n Sorry I cannot process your action.";
+echo "Sorry I cannot understand your command. Please try again.\n";
 exit;
 
-function downloadWordpress($url)
+function downloadFile($url)
 {
     echo "Downloading wordpress from source: {$url} \n";
     // echo "Retrieving http header..."; 
@@ -67,28 +68,40 @@ function downloadWordpress($url)
     return $nm;
 }
 
-function extractTo($source)
+function extractFile($source, $destination)
 {
-    $destination = extractPath();
     echo "Extracting the downloaded file to destination: {$destination} \n";
     
     if (class_exists('ZipArchive')) {
-        $zip = new ZipArchive;
-        $res = $zip->open($source);
-        if ($res === FALSE) {
-            echo "No extractable file found! \n";
-            exit;
-        }
-        $zip->extractTo($destination);
-        $zip->close();
-    } else {
-        exec("unzip -o -d {$destination} {$source}");
+        _extractUsingExtZipArcive($source, $destination);
+        echo "Extraction Completed! \n";
+        return;
     }
-
+    _extractUsingEnvDefault($source, $destination);
     echo "Extraction Completed! \n";
+    return; 
 }
 
-function extractPath()
+function _extractUsingExtZipArcive($source, $destination)
 {
-    return __DIR__ . '/';
+    $zip = new ZipArchive;
+    $res = $zip->open($source);
+    if ($res === false) {
+        echo "No extractable file found! \n";
+        exit;
+    }
+    $zip->extractTo($destination);
+    $zip->close();   
+}
+
+function _extractUsingEnvDefault($source, $destination)
+{
+    exec("unzip -o -d {$destination} {$source}");  
+}
+
+function removeUnusedFile($filename)
+{
+    echo "Deleting unused file: {$filename} \n";
+    unlink($filename);
+    echo "Deletion Completed! \n";
 }
