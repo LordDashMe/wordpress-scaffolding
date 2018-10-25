@@ -24,9 +24,9 @@
 
 - Recommended to install the project via Composer. Use the command below to install the package:
 
-```txt
-composer create-project lorddashme/wordpress-scaffolding <your-project-name>
-```
+  ```txt
+  composer create-project lorddashme/wordpress-scaffolding <your-project-name>
+  ```
 
 ## Usage
 
