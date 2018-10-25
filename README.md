@@ -14,9 +14,17 @@
 
 - You can check the latest wordpress requirements: <https://wordpress.org/about/requirements/>
 
-## Usage
+## Install
 
-- Just clone or download this repository to start your project with wordpress.
+- Recommended to install the package via Composer. Use the command below to install the package:
+
+```txt
+composer create-project lorddashme/wordpress-scaffolding <your-project-name>
+```
+
+- 
+
+## Usage
 
 - Copy and rename the default file(s):
 
