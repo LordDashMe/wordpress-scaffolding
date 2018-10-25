@@ -2,7 +2,7 @@
 
 :building_construction: :construction: :construction_worker: A kick starter project structure for wordpress.
 
-[![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%205.6-8892BF.svg?style=flat-square)](https://php.net/)
+[![Latest Stable Version](https://img.shields.io/packagist/v/lorddashme/wordpress-scaffolding.svg?style=flat-square)](https://packagist.org/packages/lorddashme/wordpress-scaffolding) [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%205.6-8892BF.svg?style=flat-square)](https://php.net/)
 
 ## Supported Web Server
 
