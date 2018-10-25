@@ -31,7 +31,7 @@ RedirectMatch 404 ^/\.git(/?|/.*)
 RedirectMatch 404 ^/vendor(/?|/.*)
 
 # BEGIN BLOCK ACCESS TO SPECIFIC FILES
-<FilesMatch "^(composer.json|composer.lock|htaccess-sample|wp-config-sample.php|wp-config.php|maintenance.php)$">
+<FilesMatch "^(composer.json|composer.lock|htaccess-sample|wp-config-sample.php|wp-config.php|maintenance.php|LICENSE|README.md)$">
     Order Allow,Deny
     Deny from All
 </FilesMatch>
