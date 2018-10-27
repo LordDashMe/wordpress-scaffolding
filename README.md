@@ -32,7 +32,7 @@
 
 - Add what ever wordpress version you want to use in ```/wordpress/```.
 
-  - You can check the wordpress download releases here: https://wordpress.org/download/releases/
+  - You can check the current wordpress download releases here: https://wordpress.org/download/releases/
   
 - <b>Optional:</b> If you are lazy to install wordpress on your own, you can follow the instruction below. 
   
