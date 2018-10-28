@@ -6,9 +6,9 @@
 
 ## Note
 
-- The wordpress core is only registered as git submodule in ```/wordpress/```, 
+- The Wordpress core is only registered as git submodule in ```/wordpress/```, 
 
-- Current git submodule wordpress version is 4.9.8.
+- Current git submodule Wordpress version is 4.9.8.
 
 ## Supported Web Server
 
@@ -18,7 +18,7 @@
 
 - PHP version from 5.6.* up to latest.
 
-- You can also check the latest wordpress requirements: <https://wordpress.org/about/requirements/>
+- You can also check the latest Wordpress requirements: <https://wordpress.org/about/requirements/>
 
 ## Install
 
@@ -32,11 +32,11 @@
 
 - Add what ever wordpress version you want to use in ```/wordpress/```.
 
-  - You can check the current wordpress download releases here: https://wordpress.org/download/releases/
+  - You can check the current Wordpress download releases here: https://wordpress.org/download/releases/
   
 - <b>Optional:</b> If you are lazy to install wordpress on your own, you can follow the instruction below. 
   
-  - To install specific wordpress version you can use the command below, but make sure you are in the root directory of you project:
+  - To install specific Wordpress version you can use the command below, but make sure you are in the root directory of you project:
 
     ```text
     php wordpress-scaffolding install <your-wordpress-version>
@@ -44,7 +44,7 @@
 
 - Copy and rename the default file(s):
 
-  - ```wp-config-sample.php``` > ```wp-config.php``` - To enable the wordpress config file.
+  - ```wp-config-sample.php``` > ```wp-config.php``` - To enable the Wordpress config file.
 
   - For apache only: ```htaccess-sample``` > ```.htaccess``` - To enable some security and override the apache host setup.
 
