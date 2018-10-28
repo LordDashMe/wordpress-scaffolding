@@ -36,7 +36,7 @@
   
 - <b>Optional:</b> If you are lazy to install wordpress on your own, you can follow the instruction below. 
   
-  - To install specific Wordpress version you can use the command below, but make sure you are in the root directory of you project:
+  - To install specific Wordpress version you can use the command below, but make sure you are in the root directory of the project:
 
     ```text
     php wordpress-scaffolding install <your-wordpress-version>
