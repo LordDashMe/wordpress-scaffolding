@@ -1,6 +1,6 @@
 # Wordpress Scaffolding
 
-:building_construction: :construction: :construction_worker: A kick starter project structure for wordpress.
+:building_construction: :construction: :construction_worker: A kick starter project structure for Wordpress.
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/LordDashMe/wordpress-scaffolding.svg?style=flat-square)](https://packagist.org/packages/LordDashMe/wordpress-scaffolding) [![Minimum PHP Version](https://img.shields.io/badge/php-%3E%3D%205.6-8892BF.svg?style=flat-square)](https://php.net/)
 
