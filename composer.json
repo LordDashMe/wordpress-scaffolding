@@ -13,11 +13,12 @@
         }
     ],
     "require": {
-        "php": ">=5.6"
+        "php": ">=5.6 || >=7.0 || >=7.1 || >=7.2",
+        "lorddashme/wordpress-db-schema-extender": "^1.0"
     },
     "require-dev": {
         "wp-cli/wp-cli": "^1.5",
-        "phpunit/phpunit": "^5",
+        "phpunit/phpunit": "5.* || 6.* || 7.*",
         "fzaninotto/faker": "^1.8@dev",
         "mockery/mockery": "~1.0"
     }
