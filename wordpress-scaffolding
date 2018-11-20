@@ -8,7 +8,7 @@ if ($argv[1] == 'install') {
     if ($argv[2] != null) {
         echo "Preparing...\n";
         $filename = downloadFile('https://wordpress.org/wordpress-' . $argv[2] . '.zip');
-        extractFile($filename, __DIR__ . '/');
+        extractFile($filename, __DIR__ . '/wp/');
         removeUnusedFile($filename);
         echo "Finished! \n";
         exit;
