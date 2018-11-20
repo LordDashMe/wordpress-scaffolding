@@ -6,7 +6,7 @@
 
 ## Note
 
-- The Wordpress core is only registered as git submodule in ```/wordpress/```, 
+- The Wordpress core is only registered as git submodule in ```/wp/```, 
 
 - Current git submodule Wordpress version is 4.9.8.
 
@@ -30,7 +30,7 @@
 
 ## Usage
 
-- Add what ever wordpress version you want to use in ```/wordpress/```.
+- Add what ever wordpress version you want to use in ```/wp/```.
 
   - You can check the current Wordpress download releases here: https://wordpress.org/download/releases/
   
