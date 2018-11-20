@@ -30,7 +30,7 @@
 
 ## Usage
 
-- Add what ever wordpress version you want to use in ```/wordpress/```.
+- Add what ever wordpress version you want to use in ```/wp/```.
 
   - You can check the current Wordpress download releases here: https://wordpress.org/download/releases/
   
