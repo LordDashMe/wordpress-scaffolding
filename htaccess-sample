@@ -1,3 +1,4 @@
+
 # BEGIN WORDPRESS ADMIN WHITELISTING
 <IfModule mod_rewrite.c>
     RewriteEngine On
@@ -31,7 +32,7 @@ RedirectMatch 404 ^/\.git(/?|/.*)
 RedirectMatch 404 ^/vendor(/?|/.*)
 
 # BEGIN BLOCK ACCESS TO SPECIFIC FILES
-<FilesMatch "^(composer.json|composer.lock|htaccess-sample|wp-config-sample.php|wp-config.php|maintenance.php|LICENSE|README.md|wordpress-scaffolding)$">
+<FilesMatch "^(composer.json|composer.lock|htaccess-sample|wp-config-sample.php|wp-config.php|maintenance-sample.php|maintenance.php|LICENSE|README.md|wordpress-scaffolding)$">
     Order Allow,Deny
     Deny from All
 </FilesMatch>
@@ -40,17 +41,19 @@ RedirectMatch 404 ^/vendor(/?|/.*)
     Deny from All
 </FilesMatch>
 
-# BEGIN WORDPRESS
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteBase /
-    RewriteRule ^index\.php$ - [L]
-    RewriteCond %{REQUEST_FILENAME} !-f
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteRule . /index.php [L]
-</IfModule>
-
 # OPTIONAL: REDIRECT ALL HTTP CODE 4XX TO 404
 # ErrorDocument 400 /404
 # ErrorDocument 404 /404
 # ErrorDocument 403 /404
+
+# BEGIN WordPress
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+
+# END WordPress

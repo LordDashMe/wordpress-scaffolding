@@ -57,4 +57,4 @@ a:hover { color: #333; text-decoration: none; }
 </article>
 </body>
 </html>
-<?php } ?>
+<?php exit; } ?>

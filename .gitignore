@@ -1,5 +1,6 @@
 .htaccess
 wp-config.php
+maintenance.php
 /node_modules/
 /vendor/
 /site-content/uploads/

@@ -28,7 +28,7 @@ if (! in_array($_SERVER['HTTP_HOST'], $allowedHosts)) {
 }
 
 define('WP_HOMEURL', $protocol . $_SERVER['HTTP_HOST'] . '/');
-define('WP_SITEURL', $protocol . $_SERVER['HTTP_HOST'] . '/wordpress');
+define('WP_SITEURL', $protocol . $_SERVER['HTTP_HOST'] . '/wp');
 define('WP_CONTENT_DIR', dirname(__FILE__) . '/site-content');
 define('WP_CONTENT_URL', $protocol . $_SERVER['HTTP_HOST'] . '/site-content');
 
@@ -85,7 +85,7 @@ define('WP_DEBUG_LOG', true);
 |--------------------------------------------------------------------------
 */
 if (! defined('ABSPATH')) {
-    define('ABSPATH', dirname(__FILE__) . '/wordpress/');
+    define('ABSPATH', dirname(__FILE__) . '/wp/');
 }
 
 require_once(ABSPATH . 'wp-settings.php');
@@ -98,4 +98,3 @@ require_once(ABSPATH . 'wp-settings.php');
 | process of the wordpress core files.
 |
 */
-
