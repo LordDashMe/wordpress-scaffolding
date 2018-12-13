@@ -19,6 +19,8 @@
  * Domain Path: /languages
  */
 
-if (! defined('ABSPATH')) { exit(); }
+if (! defined('ABSPATH')) { 
+    exit(); 
+}
 
 register_theme_directory(ABSPATH . 'wp-content/themes');

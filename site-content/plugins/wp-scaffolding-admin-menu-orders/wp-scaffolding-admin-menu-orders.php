@@ -21,7 +21,9 @@
 
 namespace LordDashMe\WordpressScaffolding\AdminMenuOrders;
 
-if (! defined('ABSPATH')) { exit(); }
+if (! \defined('ABSPATH')) { 
+    exit(); 
+}
 
 use function LordDashMe\WordpressScaffolding\AdminMenuOrders\overrideMenuOrder;
 use function LordDashMe\WordpressScaffolding\AdminMenuOrders\pluginsOrder;
@@ -46,6 +48,15 @@ function overrideMenuOrder($menuOrder)
     return \array_merge($menuOrder, $pluginsOrder);
 }
 
+/**
+ * Place your new plugins order here.
+ * 
+ * The label or value may vary base on the plugin standards,
+ * but mostly all you need to check is the plugin init file name and place it
+ * to the array list.
+ * 
+ * @return array
+ */
 function pluginsOrder()
 {
     return array(
@@ -53,10 +64,5 @@ function pluginsOrder()
     );
 }
 
-\add_filter('menu_order', function ($menuOrder) {
-    return overrideMenuOrder($menuOrder);
-}, 10, 1);
-
-\add_filter('custom_menu_order', function ($menuOrder) {
-    return overrideMenuOrder($menuOrder);
-}, 10, 1);
+\add_filter('menu_order', function ($menuOrder) { return overrideMenuOrder($menuOrder); }, 10, 1);
+\add_filter('custom_menu_order', function ($menuOrder) { return overrideMenuOrder($menuOrder); }, 10, 1);

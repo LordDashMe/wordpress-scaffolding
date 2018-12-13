@@ -1,7 +1,7 @@
 {
     "name": "lorddashme/wordpress-scaffolding",
     "description": "A kick starter project structure for Wordpress.",
-    "keywords": ["wordpress", "blog", "cms", "project", "scaffolding"],
+    "keywords": ["wordpress", "blog", "cms", "project", "scaffolding", "wp", "wp-scaffolding"],
     "type": "project",
     "homepage": "https://github.com/lorddashme/wordpress-scaffolding",
     "license": "MIT",

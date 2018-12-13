@@ -98,3 +98,6 @@ require_once(ABSPATH . 'wp-settings.php');
 | process of the wordpress core files.
 |
 */
+if (defined('WP_DEBUG_LOG') && WP_DEBUG_LOG) {
+    ini_set('error_log', WP_CONTENT_DIR . '/wp-scaffolding-debug.log');
+}
