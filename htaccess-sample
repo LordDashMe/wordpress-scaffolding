@@ -1,14 +1,14 @@
 
 # BEGIN WORDPRESS ADMIN WHITELISTING
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{REQUEST_URI} ^(.*)?wp-admin/admin-ajax\.php(.*)$
-    RewriteRule ^(.*)$ - [L]
-    RewriteCond %{REQUEST_URI} ^(.*)?wp-login\.php(.*)$ [OR]
-    RewriteCond %{REQUEST_URI} ^(.*)?wp-admin/
-    RewriteCond %{REMOTE_ADDR} !^192.168.0.1$
-    RewriteRule ^(.*)$ - [R=403,L]
-</IfModule>
+# <IfModule mod_rewrite.c>
+#     RewriteEngine On
+#     RewriteCond %{REQUEST_URI} ^(.*)?wp-admin/admin-ajax\.php(.*)$
+#     RewriteRule ^(.*)$ - [L]
+#     RewriteCond %{REQUEST_URI} ^(.*)?wp-login\.php(.*)$ [OR]
+#     RewriteCond %{REQUEST_URI} ^(.*)?wp-admin/
+#     RewriteCond %{REMOTE_ADDR} !^192.168.0.1$
+#     RewriteRule ^(.*)$ - [R=403,L]
+# </IfModule>
 
 # BEGIN WORDPRESS SUPORT AUTHORIZATION HEADER
 <IfModule mod_rewrite.c>
