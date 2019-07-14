@@ -34,7 +34,7 @@
 
   - You can check the current Wordpress download releases here: https://wordpress.org/download/releases/
   
-- <b>Optional:</b> If you are lazy to install wordpress on your own, you can follow the instruction below. 
+- **Optional:** If you are lazy to install wordpress on your own, you can follow the instruction below. 
   
   - To install specific Wordpress version you can use the command below, but make sure you are in the root directory of the project:
 
